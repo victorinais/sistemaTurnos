@@ -8,25 +8,33 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/riwip5-020/.nuget/packages/": {}
+    "C:\\Users\\Familia\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/riwip5-020/Desktop/sitemaTurnos/sistemaTurnos/sistemaTurnos.csproj",
+      "projectUniqueName": "C:\\Users\\Familia\\Downloads\\sistemaTurnos\\sistemaTurnos.csproj",
       "projectName": "sistemaTurnos",
-      "projectPath": "/home/riwip5-020/Desktop/sitemaTurnos/sistemaTurnos/sistemaTurnos.csproj",
-      "packagesPath": "/home/riwip5-020/.nuget/packages/",
-      "outputPath": "/home/riwip5-020/Desktop/sitemaTurnos/sistemaTurnos/obj/",
+      "projectPath": "C:\\Users\\Familia\\Downloads\\sistemaTurnos\\sistemaTurnos.csproj",
+      "packagesPath": "C:\\Users\\Familia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Familia\\Downloads\\sistemaTurnos\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/riwip5-020/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Familia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://www.nuget.org/api/v2/": {}
       },
       "frameworks": {
         "net8.0": {
@@ -38,6 +46,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -62,7 +75,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.103/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
