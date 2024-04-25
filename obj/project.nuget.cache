@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ODM52LI0A7S+IN7yo1E2I4JdJfypmu/FJuFN66PTp1iZQy0OO+EfOAWwc5v/E+8JlliL5IoU4RAl9q3gvoEslw==",
+  "dgSpecHash": "IXJEw74vpjh0z9Sn7//MXlUhi+noZvgto8wcvD4b4nIp2eer7XoYNkp8y2LM/FBibygJPWE8kkOadDBjgx5RKg==",
   "success": true,
   "projectFilePath": "D:\\SISTEMA\\Escritorio\\Sistema de gestion\\sistemaTurnos\\sistemaTurnos.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\WorkStation\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.2\\microsoft.entityframeworkcore.8.0.2.nupkg.sha512",
-    "C:\\Users\\WorkStation\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.2\\microsoft.entityframeworkcore.abstractions.8.0.2.nupkg.sha512",
-    "C:\\Users\\WorkStation\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.2\\microsoft.entityframeworkcore.analyzers.8.0.2.nupkg.sha512",
+    "C:\\Users\\WorkStation\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.4\\microsoft.entityframeworkcore.8.0.4.nupkg.sha512",
+    "C:\\Users\\WorkStation\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.4\\microsoft.entityframeworkcore.abstractions.8.0.4.nupkg.sha512",
+    "C:\\Users\\WorkStation\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.4\\microsoft.entityframeworkcore.analyzers.8.0.4.nupkg.sha512",
     "C:\\Users\\WorkStation\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.2\\microsoft.entityframeworkcore.relational.8.0.2.nupkg.sha512",
     "C:\\Users\\WorkStation\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\WorkStation\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
