@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/riwip5-020/Desktop/sitemaTurnos/sistemaTurnos/sistemaTurnos.csproj": {}
+    "/home/riwip5-020/Documents/VM3/VM/folder/sistemaTurnos/sistemaTurnos.csproj": {}
   },
   "projects": {
-    "/home/riwip5-020/Desktop/sitemaTurnos/sistemaTurnos/sistemaTurnos.csproj": {
+    "/home/riwip5-020/Documents/VM3/VM/folder/sistemaTurnos/sistemaTurnos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/riwip5-020/Desktop/sitemaTurnos/sistemaTurnos/sistemaTurnos.csproj",
+        "projectUniqueName": "/home/riwip5-020/Documents/VM3/VM/folder/sistemaTurnos/sistemaTurnos.csproj",
         "projectName": "sistemaTurnos",
-        "projectPath": "/home/riwip5-020/Desktop/sitemaTurnos/sistemaTurnos/sistemaTurnos.csproj",
+        "projectPath": "/home/riwip5-020/Documents/VM3/VM/folder/sistemaTurnos/sistemaTurnos.csproj",
         "packagesPath": "/home/riwip5-020/.nuget/packages/",
-        "outputPath": "/home/riwip5-020/Desktop/sitemaTurnos/sistemaTurnos/obj/",
+        "outputPath": "/home/riwip5-020/Documents/VM3/VM/folder/sistemaTurnos/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/riwip5-020/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
