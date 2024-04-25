@@ -19,4 +19,12 @@ html {
 
 body {
   margin-bottom: 60px;
+  height: 100vh;
+  background-color: #71abe9;
 }
+
+.cajonero {
+  background-color: aliceblue;
+  padding: 20px;
+}
+
