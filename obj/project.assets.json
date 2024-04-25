@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/riwip5-020/.nuget/packages/": {}
+    "C:\\Users\\unzor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/riwip5-020/Desktop/sitemaTurnos/sistemaTurnos/sistemaTurnos.csproj",
+      "projectUniqueName": "E:\\Copia de seguridad PC\\Riwi\\sistemaTurnos\\sistemaTurnos.csproj",
       "projectName": "sistemaTurnos",
-      "projectPath": "/home/riwip5-020/Desktop/sitemaTurnos/sistemaTurnos/sistemaTurnos.csproj",
-      "packagesPath": "/home/riwip5-020/.nuget/packages/",
-      "outputPath": "/home/riwip5-020/Desktop/sitemaTurnos/sistemaTurnos/obj/",
+      "projectPath": "E:\\Copia de seguridad PC\\Riwi\\sistemaTurnos\\sistemaTurnos.csproj",
+      "packagesPath": "C:\\Users\\unzor\\.nuget\\packages\\",
+      "outputPath": "E:\\Copia de seguridad PC\\Riwi\\sistemaTurnos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/riwip5-020/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\unzor\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -38,6 +38,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -62,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.103/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
