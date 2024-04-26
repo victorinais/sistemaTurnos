@@ -10,4 +10,10 @@ public class BaseContext : DbContext
     }
 
     public DbSet<Usuario> Usuarios { get; set; }
+
+    public DbSet<Turno> Turnos { get; set; }
+
+    public DbSet<Servicio> Servicios { get; set;}
+
+    public DbSet<Modulo> Modulos { get; set; }
 }
