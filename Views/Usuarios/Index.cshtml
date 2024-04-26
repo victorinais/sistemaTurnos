@@ -12,17 +12,19 @@
                                 <td>correo</td>
                                 <td>tipo documento</td>
                                 <td>Documento</td>
-                                <td>Atencion prioritario</td>
+                                <td>Atencion prioritaria</td>
+                                <td>tipo de servicio</td>
                             </tr>
                             @foreach( var Item in Model){
                                 <tr>
                                     <td>@Item.Id</td>
-                                    <td>@Item.Nombre</td>
-                                    <td>@Item.Apellido</td>
-                                    <td>@Item.Email</td>
-                                    <td>@Item.Id_Tipo_Documento</td>
+                                    <td>@Item.Nombres</td>
+                                    <td>@Item.Apellidos</td>
+                                    <td>@Item.Correo</td>
+                                    <td>@Item.IdTipoDocumento</td>
                                     <td>@Item.Documento</td>
-                                    <td>@Item.Id_AtencionPrioritario</td>
+                                    <td>@Item.IdAtencionPrioritaria</td>
+                                    <td>@Item.IdServicio</td>
                                 </tr>
                             }
                         </table>
