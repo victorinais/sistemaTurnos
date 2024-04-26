@@ -11,4 +11,6 @@ public class Usuario
     public int? IdServicio { get; set; }
     public int? IdAtencionPrioritaria { get; set; }
 
+    public virtual required ICollection<Turno> Turnos { get; set; }
+
 }
