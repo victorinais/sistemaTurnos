@@ -17,6 +17,43 @@ html {
   min-height: 100%;
 }
 
+
 body {
   margin-bottom: 60px;
+  background-image: url('https://wallpapercave.com/wp/wp12386812.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
+.container {
+  background-color: #5c90ff1a; /* Color de fondo del contenido para hacerlo legible */
+  padding: 20px;
+  border-radius: 10px;
+}
+/* servisio */
+.container {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; 
+}
+
+.btn {
+  flex: 1; 
+  padding: 15px 40px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #eee;
+}
+/* fin */

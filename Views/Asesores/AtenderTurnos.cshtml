@@ -1,0 +1,113 @@
+@model List<Turno>
+
+<div class="container">
+    <h1 class="text-center">Lista de turnos</h1>
+    <p class="text-center">@ViewBag.NombreAsesor</p>
+    <p class="text-center">@ViewBag.ServicioAsesor</p>
+    <div class="d-flex justify-content-center align-items-center flex-column">
+
+
+        @*--------- Mensaje de confirmacion del llamado del turno ---------------*@
+        @{
+            var turnoLlamado = Context.Session.GetInt32("TurnoLlamadoId");
+        }
+
+        @if (turnoLlamado != null){ 
+            <div class="alert alert-primary mt-2 text-center" role="alert">
+                @TempData["confirmacionLlamado"] 
+            </div>
+            
+        }
+
+        @*------------ Mensaje de confirmacion de que el usuario asistio al llamado----------- *@
+        @if(TempData["TurnoPresente"] != null){
+            <div class="alert alert-success mt-2 text-center" role="alert">
+                @TempData["TurnoPresente"] 
+            </div>
+        }
+
+        
+        @*------------ Mensaje de confirmacion de se completo el turno----------- *@
+        @if(TempData["TurnoCompletado"] != null){
+            <div class="alert alert-success mt-2 text-center" role="alert">
+                @TempData["TurnoCompletado"]
+            </div>
+        }
+
+        @*------------ Mensaje de confirmacion de se completo el turno----------- *@
+        @if(TempData["TurnoAusente"] != null){
+            <div class="alert alert-danger mt-2 text-center" role="alert">
+                @TempData["TurnoAusente"]
+            </div>
+        }
+    </div>
+
+    <div class="row  mt-5 grid gap-5">
+        <div class="col-md-12 d-flex align-items-center justify-content-center">
+                <div class="col-md-4 text-start me-5">
+                    <div class="mt-5 mb-3">
+                        <form asp-action="Logout" asp-Controller="Asesores" method="post">
+                            <button class="btn btn-primary" type="submit" style="width: 250px;">Cerrar sesion</button>
+                        </form>
+                    </div>
+                    <div>
+                        <button class="btn btn-secondary mt-2" style="width: 250px;">Cambiar Cargo</button>
+                    </div>
+
+
+                </div>
+                <div class="col-md-8">
+                    <table class="table table-striped  bg-light">
+                        <thead>
+                            <tr class="table-secondary">
+                                <th class="text-center">Id</th>
+                                <th class="text-center">Turno</th>
+                                <th class="text-center">Servicio</th>
+                                <th class="text-center">Llamar Turno</th>
+                                <th class="text-center">Estado</th>
+                                <th class="text-center">Finalizar Turno</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                @foreach(var turno in Model){
+                            <tr>
+                                <td>@turno.Id</td>
+                                <td>@turno.DigitoTurno</td>
+                                <td>@turno.IdServicio</td>
+                                <td>
+                                    <div class="text-center">
+                                        <form asp-route-id="@turno.Id" asp-action="LlamarTurno" asp-controller="Asesores" method="post">
+                                            <button type="submit" class="btn btn-primary">Aceptar turno/Llamar</button>
+                                        </form>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="mb-2 text-center">
+                                        <form asp-route-id="@turno.Id" asp-action="TurnoPresente" asp-controller="Asesores" method="post">
+                                            <button type="submit" class="btn btn-success">Presente</button>
+                                        </form>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <form asp-route-id="@turno.Id" asp-action="TurnoAusente" asp-controller="Asesores" method="post">
+                                            <button type="submit" class="btn btn-secondary">Ausente</button>
+                                        </form>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-center">
+                                        <form asp-route-id="@turno.Id" asp-action="TurnoFinalizado" asp-controller="Asesores" method="post">
+                                            <button type="submit" class="btn btn-danger">Finalizar turno</button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                }
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+    </div>
+</div>

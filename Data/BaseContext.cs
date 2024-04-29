@@ -13,7 +13,11 @@ public class BaseContext : DbContext
 
     public DbSet<Turno> Turnos { get; set; }
 
+    public DbSet<Asesor> Asesores { get; set; }
+
     public DbSet<Servicio> Servicios { get; set;}
 
     public DbSet<Modulo> Modulos { get; set; }
+
+    public DbSet<IdAtencionPrioritaria> AtencionesPrioritarias { get; set; }
 }
