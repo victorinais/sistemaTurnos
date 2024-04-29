@@ -13,10 +13,26 @@ public class UsuariosController : Controller
         _context = context;
     }
 
-    //listar usuarios
-    public async Task<IActionResult> Index(){
-        return View(await _context.Usuarios.ToListAsync());
+
+    public IActionResult Index(){
+        return View();
+    }
+    [HttpPost]
+    public IActionResult Index(int tipoDocumento, int? prioritario, string documento){
+        var Usuario = _context.Usuarios.FirstOrDefault(e => e.IdTipoDocumento == tipoDocumento && e.IdAtencionPrioritaria == prioritario && e.Documento == documento);
+        if (Usuario!= null)
+        {
+            HttpContext.Session.SetString("UsuarioId", Usuario.Id.ToString());
+            HttpContext.Session.SetString("UsuarioNombres", Usuario.Nombres);
+            HttpContext.Session.SetString("UsuariosApellidos", Usuario.Apellidos);
+            return RedirectToAction("Categorias", "Turnos");
+
+        }
+        else {
+            ViewBag.Error = "¡Alguno de los datos proporcionado es incorrecto!";
+            return View();
+        }
     }
 
-    //
+     
 }

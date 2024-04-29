@@ -1,0 +1,49 @@
+<div class="container" style="height: 80vh;">
+    <div class="d-flex flex-column justify-content-center align-items-center mb-5" style="height: 100%;">
+        <h1>Turnos</h1>
+    <div class="card mt-5" style="width: 500px; height300px">
+        <div class="card-body">
+        <h1 class="card-title text-center">@ViewBag.ServicioElegido</h1>
+        <h2 class="card-subtitle mb-2 text-body-secondary text-center">@ViewBag.TurnoFinal</h2>
+        <p class="card-text text-center">@DateTime.Now</p>
+
+        <div class="buttons d-flex flex-column justify-content-center align-items-center">
+            <div class="rom-control mb-3 text-center">
+                @* Verificar si ya se recog*@
+                @{
+                    var btnFechaEntregaTurno = Context.Session.GetString("HoraEntregaTurno");
+                }
+
+                @if (btnFechaEntregaTurno != null)
+                {
+                    <form asp-action="EntregarTurno" asp-controller="Turnos" method="post">
+                        <button class="btn btn-primary" type="submit" name="RecogerTurno" value="turnoEntrega" style="width: 250px;" disabled >Recibir Turno</button>
+                    </form>
+                    @if(TempData["MensajeConfirmacion"] != null){
+                        <div class="alert alert-success mt-2" role="alert">
+                            @TempData["MensajeConfirmacion"]
+                        </div>
+                    }
+
+                }
+                else{
+                <form asp-action="EntregarTurno" asp-controller="Turnos" method="post">
+                        <button class="btn btn-primary" type="submit" name="RecogerTurno" value="turnoEntrega" style="width: 250px;">Recibir Turno</button>
+                    </form>
+                    
+                }
+            </div>
+            <div class="from-control mb-3 text-center">
+                <form asp-action="Logout" asp-Controller="Turnos" method="post">
+                    <button class="btn btn-primary" type="submit" style="width: 250px;">Volver al inicio</button>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    </div>
+
+</div>
+

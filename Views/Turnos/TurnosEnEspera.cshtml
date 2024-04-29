@@ -1,0 +1,47 @@
+@model List<Turno>
+
+<div class="container" style="height: 80vh;">
+    <div class="row d-flex justify-content-center align-items-center" style="height: 100%;">
+            <div class="col-md-10">
+                <h1 class="text-center mb-4">Turnos</h1>
+
+                    @{
+                        var turnoLlamado = Context.Session.GetInt32("TurnoLlamadoId");
+                    }
+
+                @*  @if (turnoLlamado != null){ 
+                        <div class="alert alert-success mt-2" role="alert">
+                            @TempData["ConfirmarLlamado"]
+                        </div>
+                        
+                    } *@
+
+                    <table class="table table-border border-dark mt-4 bg-light">
+                        <thead class="table-dark">
+                            <tr>
+                                <th class="col">MODULO</th>
+                                <th class="col">TURNO</th>
+                                <th class="col">ESTADO</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody >
+        @foreach(var turno in Model){
+
+                                    
+                            <tr class='@(turno.Id == turnoLlamado ? "table-danger": "")'>
+                                <!-- Contenido de la fila de la tabla -->
+                                <td>@turno.IdModulo</td>
+                                <td>@turno.DigitoTurno</td>
+                                <td>@turno.Estado</td>
+                            </tr>
+
+                                
+                                
+                }
+                        </tbody>
+                    </table>
+
+        </div>
+    </div>
+</div>

@@ -14,11 +14,29 @@ public class ServiciosController : Controller
         _context = context;
     }
 
-    //listar usuarios
-    public async Task<IActionResult> Index()
-    {
-        return View(await _context.Servicios.ToListAsync());
+
+    public IActionResult Index(){
+        return View();
     }
 
-    //
+    /* REINICIAR CANTIDAD DE TURNOS */
+    public async Task<IActionResult> ReiniciarCantidadTurnos(){
+        // Obtener todos los servicios
+        var servicios = await _context.Servicios.ToListAsync();
+
+        // En cada servicio establecer la cantidad de turnos
+        foreach (var servicio in servicios)
+        {
+            servicio.CantidadTurnos = 0;
+        }
+        
+        // Guardar los cambios en la base de datos
+        await _context.SaveChangesAsync();
+        return View(); 
+    }
+ 
+
+
+
+   
 }
