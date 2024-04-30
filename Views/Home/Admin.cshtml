@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Administración";
+}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col">
+            <div class="text-center mt-3">
+                <img src="~/images/logo.png" class="rounded mb-5" alt="imaagen-hospital">
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p class="h1 fw-bold text-center">Bienvenidos al Sistema de Administración para colaboradores</p>
+                </div>
+                <div class="card-body">
+                    <div class="text-center mt-3">
+                        <p class="text-sm-h5" >Presiona este boton si eres asesor</p>
+                    </div>
+                    <div class="d-grid col-8 mx-auto mt-4 mb-4">
+                        <a class="btn btn-primary btn-lg" asp-controller="Asesores" asp-action="Login">Asesores</a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="text-center mt-3">
+                        <p class="text-sm-h5" >Presiona este botón si eres administrador</p>
+                    </div>
+                    <div class="d-grid col-8 mx-auto mt-4 mb-4">
+                        <a class="btn btn-primary btn-lg" asp-controller="Servicios" asp-action="Index">Administradores</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

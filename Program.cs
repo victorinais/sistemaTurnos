@@ -42,7 +42,7 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
         name: "default",
-        pattern: "{controller=Turnos}/{action=TurnosEnEspera}/{id?}");
+        pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 
 app.Run();

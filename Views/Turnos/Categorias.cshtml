@@ -1,28 +1,34 @@
 @model Turno
 
 <div class="container">
-    <div>
-        <h1 class="text-center mb-8 fw-bold display-1 text-gradient text-shadow text-animate mb-5">Selecciona el tipo de
-            servicio</h1>
-    </div>
-    <div class="d-flex mx-auto">
-        <form asp-action="Categorias" asp-controller="Turnos" method="post">
-            <div class="d-flex gap-2 justify-content-center">
-                <div class="from-control mb-3 ">
-                    <button class="btn btn-primary" type="submit" name="servicio" value="1">Solicitar cita</button>
+    <div class="row justify-content-center">
+        <div class="col">
+            <div class="text-center mt-3">
+                <img src="~/images/logo.png" class="rounded mb-5" alt="imaagen-hospital">
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p class="h2 fw-bold text-center">Seleccione el servicio deseado presionando el botón</p>
                 </div>
-                <div class="from-control mb-3">
-                    <button class="btn btn-warning" type="submit" name="servicio" value="2">Pago de facturas</button>
-                </div>
-                <div class="from-control mb-3">
-                    <button class="btn btn-secondary" type="submit" name="servicio" value="3">Autorización de
-                        medicamentos</button>
-                </div>
-                <div class="from-control mb-3">
-                    <button class="btn btn-success" type="submit" name="servicio" value="4">Información en
-                        general</button>
+                <div class="card-body my-4">
+                    <form asp-action="Categorias" asp-controller="Turnos" method="post">
+                        <div class="d-flex flex-column text-center">
+                            <div class="from-control mb-3 d-grid col-8 mx-auto">
+                                <button class="btn btn-primary btn-" type="submit" name="servicio" value="1">Solicitar cita</button>
+                            </div>
+                            <div class="from-control mb-3 d-grid col-8 mx-auto">
+                                <button class="btn btn-warning" type="submit" name="servicio" value="2">Pago de facturas</button>
+                            </div>
+                            <div class="from-control mb-3 d-grid col-8 mx-auto">
+                                <button class="btn btn-secondary" type="submit" name="servicio" value="3">Autorización de medicamentos</button>
+                            </div>
+                            <div class="from-control mb-3 d-grid col-8 mx-auto">
+                                <button class="btn btn-success" type="submit" name="servicio" value="4">Información en general</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
 </div>

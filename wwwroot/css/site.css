@@ -12,48 +12,86 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
+/* html {
   position: relative;
   min-height: 100%;
-}
-
-
-body {
+} */
+/* body {
   margin-bottom: 60px;
   background-image: url('https://wallpapercave.com/wp/wp12386812.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center; 
   height: 100vh;
-}
-.container {
-  background-color: #5c90ff1a; /* Color de fondo del contenido para hacerlo legible */
-  padding: 20px;
-  border-radius: 10px;
-}
-/* servisio */
-.container {  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
+}  */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.buttons {
+.container {  
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;  
+  height: 100vh; 
+  background: #65f4cd;  
+  background: -moz-linear-gradient(left, #65f4cd 0%, #4799e9 100%); 
+  background: -webkit-linear-gradient(left, #65f4cd 0%,#4799e9 100%);
+  background: linear-gradient(to right, #65f4cd 0%,#4799e9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65f4cd', endColorstr='#4799e9',GradientType=1 );
+}
+
+/* .buttons {
   display: flex;
   flex-direction: row;
   gap: 20px; 
-}
+} */
 
 .btn {
-  flex: 1; 
   padding: 15px 40px;
-  font-size: 16px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-sm {
+  padding: 10px 20px;
+  font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #eee;
+  background-color: #6de27f;
+  color: black;
+  
 }
-/* fin */
+
+.turno {
+  font-size: 6rem;
+}
+
+.table-danger{
+  background-color: #FFCC99;
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .container {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
