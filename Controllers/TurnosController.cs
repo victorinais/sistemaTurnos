@@ -29,7 +29,7 @@ public class TurnosController : Controller
             IdServicio = servicio
         };
 
-       // Añadir a la tabla los cu¡ambis y guardarlos.
+       // Añadir a la tabla los cambios y guardarlos.
         _context.Turnos.Add(turno);
         _context.SaveChanges();
 
